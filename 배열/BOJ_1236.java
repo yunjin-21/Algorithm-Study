@@ -15,11 +15,11 @@ public class BOJ_1236 {
         int cnt2 = 0;
 
         for (int r = 0; r < row; r++) {
-            boolean isMatch = true;
+            boolean isMatch = false;
             for (int c = 0; c < col; c++) { // 첫번째 가로줄 비교
                 if (arr[r][c] == 'X') { // 첫번째 줄에 'X' 가 존재하면
-                    isMatch = false;
-                    break;// 바로 넘어가기
+                    isMatch = true;
+                    break;// 해당 루프를 종료
                 }
             }
             if (isMatch) {
@@ -35,10 +35,10 @@ public class BOJ_1236 {
          */
 
         for (int c = 0; c < col; c++) {
-            boolean isMatch = true;
+            boolean isMatch = false;
             for (int r = 0; r < row; r++) { // 첫번째 세로줄 비교
                 if (arr[r][c] == 'X') { // 첫번째 줄에 'X' 가 존재하면
-                    isMatch = false;
+                    isMatch = true;
                     break;// 바로 넘어가기
                 }
             }
