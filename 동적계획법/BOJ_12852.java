@@ -5,8 +5,8 @@ public class BOJ_12852 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int dp[][] = new int[n + 1][2];
-        dp[1][0] = 0; // 1로가는개수
-        dp[1][1] = 0;
+        dp[1][0] = 0; // n에서 1로가는 최소 개수
+        dp[1][1] = 0; // 뭐를 저장하는거지? = n에서 1빼는지 2나누는지 3나누는지 확인하는 값
 
         for (int i = 2; i <= n; i++) {
             dp[i][0] = dp[i - 1][0] + 1;
