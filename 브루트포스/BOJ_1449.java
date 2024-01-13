@@ -10,24 +10,15 @@ public class BOJ_1449 {
             a[i] = sc.nextInt();
         }
         Arrays.sort(a);
-        int b[] = new int[n];
-        int tape = 0;
-        int j = 0;
-        for (int i = 0; i < n - 1; i++) {
-
-            if (a[i] - 0.5 + len >= a[i + 1]) {
+        int tape = 1;
+        int currentPosition = a[0];// 한곳초기화
+        for (int i = 1; i < n; i++) {// i+1대신 i만사용하게 범위변경
+            if (currentPosition - 0.5 + len < a[i] + 0.5) {// 2.5>=2.5 101.5 >= 101.5
                 tape++;
-            } else {
-
-                b[j++] = a[i + 1];
+                currentPosition = a[i];
             }
-        }
 
-        if (ans % len != 0) {
-            System.out.println((ans / len) + 1);
-        } else {
-            System.out.println(ans / len);
         }
-
+        System.out.println(tape);
     }
 }
