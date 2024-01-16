@@ -13,7 +13,7 @@ public class BOJ_1449 {
         int tape = 1;
         int currentPosition = a[0];// 한곳초기화
         for (int i = 1; i < n; i++) {// i+1대신 i만사용하게 범위변경
-            if (currentPosition - 0.5 + len < a[i] + 0.5) {// 2.5>=2.5 101.5 >= 101.5
+            if (currentPosition - 0.5 + len < a[i] + 0.5) {// 3.5 <2.5 3.5< 3.5 3.5 <4.5드디어 위치 변경
                 tape++;
                 currentPosition = a[i];
             }
