@@ -24,14 +24,14 @@ public class FalsePeople {
         }
     }
 
-    public static int countGroups(int m, ArrayList<ArrayList<Integer>> party, int [] parent, boolean[] knowsTruth){
+    public static int countGroups(int m, ArrayList<ArrayList<Integer>> party, int[] parent, boolean[] knowsTruth) {
         int cnt = 0;
-        for(int i=0;i<m;i++){
-            int r = 
+        for (int i = 0; i < m; i++) {
+            //////////////////////
         }
     }
 
-    public int solution(int n, int m, ArrayList<Integer> truth, ArrayList<ArrayList<Integer>> party) {
+    public static int solution(int n, int m, ArrayList<Integer> truth, ArrayList<ArrayList<Integer>> party) {
         int[] parent = new int[n + 1];
         boolean[] knowsTruth = new boolean[n + 1];
 
