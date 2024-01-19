@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BOJ_15654 {
+public class BOJ_15657 {
     public static int m;
     public static int n;
     public static boolean check[];
@@ -21,11 +21,11 @@ public class BOJ_15654 {
 
         Arrays.sort(arr);
         // 4p2 4p4 npm
-        perm(0);
+        perm(0, 0);
 
     }
 
-    public static void perm(int depth) {
+    public static void perm(int depth, int start) {
         // base case
         // StringBuilder sb = new StringBuilder();
         // for (int i = 0; i < m; i++)
@@ -37,15 +37,15 @@ public class BOJ_15654 {
             System.out.println();
             return;
         }
-        for (int i = 0; i < n; i++) {
-            if (!check[i]) {
-                check[i] = true;
+        // recurisive case
+        for (int i = start; i < n; i++) {
 
-                output[depth] = arr[i];
-                perm(depth + 1);
+            check[i] = true;
 
-                check[i] = false; // 다음부터 재활용 가능
-            }
+            output[depth] = arr[i];
+            start = i;
+            perm(depth + 1, start);
+
         }
     }
 }
