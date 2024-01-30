@@ -17,6 +17,7 @@ public class BOJ_15655 {
             arr[i] = sc.nextInt();
         }
         check = new boolean[n];
+
         output = new int[m];
 
         Arrays.sort(arr);
